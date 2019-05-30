@@ -50,7 +50,7 @@ done
 # verification. Skip it.
 jar_args=()
 boot_jars=$("$ANDROID_BUILD_TOP"/art/tools/bootjars.sh --target)
-jar_dir=$ANDROID_BUILD_TOP/$(get_build_var TARGET_OUT_JAVA_LIBRARIES)
+jar_dir=$(get_build_var TARGET_OUT_JAVA_LIBRARIES)
 for file in $boot_jars; do
   filename="$jar_dir/$file.jar"
   jar_args+=("--apk=$filename")
